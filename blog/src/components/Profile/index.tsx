@@ -1,5 +1,5 @@
 import { GithubLogo } from '@phosphor-icons/react'
-import { ProfileContainer, TagsProfile, TagsContainer } from './styles'
+import { ProfileContainer, ProfileTextContain, HeaderProfile, TagsProfile, TagsContainer } from './styles'
 
 export function Profile() {
     return (
@@ -7,15 +7,15 @@ export function Profile() {
             <div>
                 <img src='src/assets/avatar.png' />
             </div>
-            <div>
-                <div>
+            <ProfileTextContain>
+                <HeaderProfile>
                     <strong>
                         Cameron Williamson
                     </strong>
-                    <section>
-                        github
-                    </section>
-                </div>
+                    <a>
+                        GITHUB
+                    </a>
+                </HeaderProfile>
                 <span>
                     Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
                 </span>
@@ -33,7 +33,7 @@ export function Profile() {
                         <span>32 seguidores</span>
                     </TagsProfile>
                 </TagsContainer>
-            </div>
+            </ProfileTextContain>
         </ProfileContainer>
     )
 }

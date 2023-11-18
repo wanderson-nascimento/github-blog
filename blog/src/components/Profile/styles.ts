@@ -30,4 +30,15 @@ export const TagsContainer = styled.div`
     display: flex;
     gap:24px;
 `
+export const HeaderProfile = styled.header`
+ display:flex;
+ justify-content: space-between;
+
+`
+
+export const ProfileTextContain = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+`
 
