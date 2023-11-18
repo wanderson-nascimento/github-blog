@@ -7,6 +7,7 @@ export const ProfileContainer = styled.div`
     display:flex;
     padding: 32px;
     gap:32px;
+    margin-top:-80px;
 
 
     border-radius: 10px;
