@@ -10,7 +10,12 @@ gap: 24px;
 
 `
 export const TextDetails = styled.div`
+    color: ${(props) => props.theme['base-text']};
+    font-size: 16px;
 
+    a{
+        color: ${(props) => props.theme['blue']};
+    }
 `
 
 export const CodeContainer = styled.div`

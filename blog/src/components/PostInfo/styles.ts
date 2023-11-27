@@ -18,6 +18,24 @@ header{
 }
 
 h2{
+    margin-top:20px;
     color: ${(props) => props.theme['base-title']};
+    margin-bottom:8px;
+}
+
+a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    
+/* Components/Link */
+font-family: Nunito;
+font-size: 12px;
+font-weight: 700;
+line-height: 160%; /* 19.2px */
+text-transform: uppercase;
+
+color: ${(props) => props.theme['blue']};
 }
 `

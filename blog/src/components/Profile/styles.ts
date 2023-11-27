@@ -29,7 +29,7 @@ export const TagsProfile = styled.section`
 `
 export const TagsContainer = styled.div`
     display: flex;
-    gap:24px;
+    gap:32px;
 `
 export const HeaderProfile = styled.header`
  display:flex;
