@@ -1,7 +1,11 @@
 import { GithubLogo } from '@phosphor-icons/react'
 import { ProfileContainer, ProfileTextContain, HeaderProfile, TagsProfile, TagsContainer } from './styles'
+import { GitContext } from '../../contexts/IssueContext'
+import {useContext} from 'react'
 
 export function Profile() {
+    const {fetchUserInfo} = useContext(GitContext)
+
     return (
         <ProfileContainer>
             <div>

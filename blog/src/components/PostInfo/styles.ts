@@ -27,6 +27,7 @@ a{
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    text-decoration:none;
 
     
 /* Components/Link */

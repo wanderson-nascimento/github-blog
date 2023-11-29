@@ -17,7 +17,7 @@ export function SearchForm() {
                 <small>6 publicações</small>
             </section>
             <FormContainer onSubmit={onSubmit}>
-                <input {...register("query")} />
+                <input {...register("query")} placeholder="Buscar conteúdo"/>
             </FormContainer>
         </SearchFormContainer>
     )

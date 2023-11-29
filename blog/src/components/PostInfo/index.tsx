@@ -3,15 +3,21 @@ import { PostInfoContainer } from "./styles";
 import { GithubLogo } from '@phosphor-icons/react'
 import arrow from '../../assets/arrow.svg'
 import icon from '../../assets/icon.svg'
+import { NavLink } from "react-router-dom";
 
 export function PostInfo() {
     return (
         <PostInfoContainer>
             <header>
                 <a>
-                    <img src={arrow} />
-                    VOLTAR
+                    <nav>
+                        <NavLink to="/" title="Home">
+                            <img src={arrow} />
+                            VOLTAR
+                        </NavLink>
+                    </nav>
                 </a>
+
                 <a>
                     VER NO GITHUB
                     <img src={icon} />
