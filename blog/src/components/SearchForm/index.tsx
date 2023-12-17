@@ -1,13 +1,19 @@
 import { FormContainer, SearchFormContainer } from "./styles";
 import { useForm } from "react-hook-form";
+import { GitContext } from "../../contexts/GitContext";
+import { useContext } from "react";
 
 type FormData = {
     query: string;
 };
 
 export function SearchForm() {
+    const { fetchIssueList } = useContext(GitContext)
     const { register, handleSubmit } = useForm<FormData>();
-    const onSubmit = handleSubmit(data => console.log(data));
+
+    async function handleSearchIssue(data: any) {
+        await fetchIssueList(data.query)
+    }
 
     return (
 
@@ -16,8 +22,12 @@ export function SearchForm() {
                 <span>Publicações</span>
                 <small>6 publicações</small>
             </section>
-            <FormContainer onSubmit={onSubmit}>
-                <input {...register("query")} placeholder="Buscar conteúdo"/>
+            <FormContainer onSubmit={handleSubmit(handleSearchIssue)}>
+                <input
+                    {...register("query")}
+                    placeholder="Buscar conteúdo"
+                    type="text"
+                />
             </FormContainer>
         </SearchFormContainer>
     )

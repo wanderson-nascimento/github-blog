@@ -3,7 +3,7 @@ import { api } from '../lib/axios';
 
 interface GitContextType {
     fetchUserInfo: () => Promise<void>;
-    fetchIssueList: () => Promise<void>;
+    fetchIssueList: (query?: string) => Promise<void>;
     userInfo: string[];
     issueList: string[];
 }
@@ -20,14 +20,19 @@ export function GitProvider({ children }: GitContextProviderProps) {
 
 
 
-    const fetchIssueList = useCallback(async () => {
+    const fetchIssueList = useCallback(async (query?:string ) => {
+        console.log(query);
+        
+        api.interceptors.request.use(request => {
+            console.log('Starting Request', request)
+            return request
+          })
 
-        const texto = 'Boas práticas';
-        const username = 'rocketseat-education';
-        const repo = 'reactjs-github-blog-challenge';
+        const username = 'wanderson-nascimento';
+        const repo = 'github-blog';
         const response = await api.get(`/search/issues`, {
             params: {
-              q: `${texto} repo:${username}/${repo}`,
+              q: `${query??""} repo:${username}/${repo}`,
             }
           })
         setIssueList(response.data.items)

@@ -7,7 +7,6 @@ export function PostList(){
 
     const {issueList} = useContext(GitContext);
 
-    console.log(issueList)
 
     return(
         <PostListContainer>
