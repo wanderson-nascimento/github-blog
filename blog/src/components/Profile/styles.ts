@@ -15,12 +15,34 @@ export const ProfileContainer = styled.div`
     box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.20);
 
     img{
+        width: 148px;
+        height: 148px;
+        flex-shrink: 0;
+
         border-radius: 8px;
     }
 
     strong{
         color: ${(props) => props.theme['base-title']};
         font-size: 24px;
+    }
+
+    a{  
+        font-size: 12px;
+        font-weight: 700;
+        display:flex;
+        cursor:pointer;
+        text-decoration: none;
+
+
+        color: ${(props) => props.theme['blue']};
+        align-items:center;
+        gap:8px;
+
+        img{
+            width: 12px;
+            height: 12px;
+        }
     }
 `
 export const TagsProfile = styled.section`
@@ -30,6 +52,11 @@ export const TagsProfile = styled.section`
 export const TagsContainer = styled.div`
     display: flex;
     gap:32px;
+
+    img{
+        width: 18px;
+        height: 18px;
+    }
 `
 export const HeaderProfile = styled.header`
  display:flex;

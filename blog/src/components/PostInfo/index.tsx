@@ -4,8 +4,16 @@ import { GithubLogo } from '@phosphor-icons/react'
 import arrow from '../../assets/arrow.svg'
 import icon from '../../assets/icon.svg'
 import { NavLink } from "react-router-dom";
+// import { useContext } from "react";
+// import { GitContext } from "../../contexts/GitContext";
 
 export function PostInfo() {
+    // const {fetchUserInfo, userInfo} = useContext(GitContext)
+
+    // async function GetData(){
+    //     await fetchUserInfo();
+    // }
+
     return (
         <PostInfoContainer>
             <header>
