@@ -9,6 +9,8 @@ padding:32px;
 border-radius: 10px;
 background: ${(props) => props.theme['base-post']};
 color: ${(props) => props.theme['base-text']};
+cursor: pointer;
+text-decoration:none;
 
 span{
     width: 352px;

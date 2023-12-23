@@ -1,12 +1,27 @@
+import { useContext, useEffect } from "react";
 import { PostInfo } from "../../components/PostInfo";
 import { CodeContainer, PostDetailsContainer, TextDetails } from "./styles";
+import { useParams } from "react-router-dom";
+import { GitContext } from "../../contexts/GitContext";
 
 export function PostDetails() {
+
+    const { issueDetails, fetchIssueDetails } = useContext(GitContext)
+    const { issueId } = useParams();
+    
+    useEffect(() => {
+        fetchIssueDetails(issueId);
+    }, [fetchIssueDetails, issueId]);
+
+
+    console.log(issueDetails)
+
+
     return (
         <PostDetailsContainer>
             <PostInfo />
             <TextDetails>
-                Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
+                {issueDetails.body}
                 <br />
                 <br />
                 <a>Dynamic typing</a>

@@ -5,12 +5,15 @@ import { PostDetails } from "./pages/PostDetails"
 
 
 export function Router() {
+
+ 
+
     return (
         <Routes>
-            <Route path="/" element={<DefaultLayout/>}>
+            <Route path="/" element={<DefaultLayout />}>
                 <Route path="" element={<Home />} />
-                <Route path="/postDetails" element={<PostDetails/>}/>
-                </Route>
+                <Route path="/postDetails/:issueId" element={<PostDetails />} />
+            </Route>
         </Routes>
     )
 }

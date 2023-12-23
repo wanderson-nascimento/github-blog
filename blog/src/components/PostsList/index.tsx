@@ -17,6 +17,7 @@ export function PostList(){
                         itemTitle={item.title}
                         itemBody={item.body}
                         itemCreateAt={item.created_at}
+                        id={item.number}
                     />
                 )
             })}
